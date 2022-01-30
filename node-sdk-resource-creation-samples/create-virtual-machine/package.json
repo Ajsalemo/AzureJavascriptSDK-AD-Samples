@@ -1,0 +1,16 @@
+{
+  "name": "create-resource-group",
+  "version": "1.0.0",
+  "description": "Create Virtual Machines with the Azure SDK for Javascript",
+  "main": "create-resource-group.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/arm-compute": "^17.1.0",
+    "@azure/arm-network": "^26.0.0",
+    "@azure/identity": "^2.0.1"
+  }
+}

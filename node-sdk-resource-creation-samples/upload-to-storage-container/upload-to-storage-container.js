@@ -1,11 +1,12 @@
 const { BlobServiceClient } = require("@azure/storage-blob");
 const { v1: uuidv1 } = require("uuid");
 
+// Set the storage container name and connection strings to constants
 const AZURE_STORAGE_CONTAINER_NAME = process.env.AZURE_STORAGE_CONTAINER_NAME;
 const AZURE_STORAGE_CONNECTION_STRING =
   process.env.AZURE_STORAGE_CONNECTION_STRING;
 
-async function main() {
+async function uploadToStorageContainer() {
   const blobServiceClient = BlobServiceClient.fromConnectionString(
     AZURE_STORAGE_CONNECTION_STRING
   );
@@ -28,6 +29,6 @@ async function main() {
   );
 }
 
-main()
+uploadToStorageContainer()
   .then(() => console.log("Done"))
   .catch((ex) => console.log(ex.message));

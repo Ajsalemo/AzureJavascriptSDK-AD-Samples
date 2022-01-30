@@ -1,0 +1,15 @@
+{
+  "name": "create-resource-group",
+  "version": "1.0.0",
+  "description": "Create Resource Groups with the Azure SDK for Javascript",
+  "main": "create-resource-group.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/arm-resources": "^5.0.0",
+    "@azure/identity": "^2.0.1"
+  }
+}

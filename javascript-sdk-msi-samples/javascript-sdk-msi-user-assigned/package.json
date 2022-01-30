@@ -1,0 +1,15 @@
+{
+  "name": "javascript-sdk-msi-system-assigned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "javascript-sdk-msi-system-assigned.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/identity": "^2.0.1",
+    "@azure/keyvault-secrets": "^4.3.0"
+  }
+}

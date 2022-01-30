@@ -1,7 +1,7 @@
 {
     "name": "blob-quickstart-v12",
     "version": "1.0.0",
-    "description": "Use the @azure/storage-blob SDK version 12 to interact with Azure Blob storage",
+    "description": "Create Storage Containers with the Azure SDK for Javascript",
     "main": "blob-quickstart-v12.js",
     "scripts": {
         "start": "node blob-quickstart-v12.js"

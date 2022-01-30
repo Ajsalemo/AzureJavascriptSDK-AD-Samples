@@ -1,7 +1,7 @@
 {
   "name": "create-resource-group",
   "version": "1.0.0",
-  "description": "Create Resource Groups with the Azure SDK for Javascript",
+  "description": "Create App Service Plans with the Azure SDK for Javascript",
   "main": "create-resource-group.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

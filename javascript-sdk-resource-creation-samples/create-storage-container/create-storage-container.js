@@ -1,23 +1,21 @@
+const { DefaultAzureCredential } = require("@azure/identity");
 const { BlobServiceClient } = require("@azure/storage-blob");
-const { v1: uuidv1 } = require("uuid");
 
-// Set the storage connection string to a constant
-const AZURE_STORAGE_CONNECTION_STRING = process.env.AZURE_STORAGE_CONNECTION_STRING
+const account = process.env.AZURE_STORAGE_ACCOUNT_NAME;
+const defaultAzureCredential = new DefaultAzureCredential();
+
+const blobServiceClient = new BlobServiceClient(
+  `https://${account}.blob.core.windows.net`,
+  defaultAzureCredential
+);
 
 async function createStorageContainer() {
-  const blobServiceClient = BlobServiceClient.fromConnectionString(
-    AZURE_STORAGE_CONNECTION_STRING
-  );
-  const containerName = "quickstart" + uuidv1();
-
-  console.log("\nCreating container...");
-  console.log("\t", containerName);
-
+  // Create a container
+  const containerName = `newcontainer${new Date().getTime()}`;
   const containerClient = blobServiceClient.getContainerClient(containerName);
-
   const createContainerResponse = await containerClient.create();
   console.log(
-    "Container was created successfully. requestId: ",
+    `Create container ${containerName} successfully`,
     createContainerResponse.requestId
   );
 }

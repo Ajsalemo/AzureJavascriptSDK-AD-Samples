@@ -13,3 +13,6 @@ Packages used:
 When using this JavaScript SDK, `DefaultAzureCredential` expects `AZURE_SUBSCRIPTION_ID`, `AZURE_CLIENT_ID`, `AZURE_CLIENT_SECRET` and `AZURE_TENANT_ID` to be available. This is called out [here](https://docs.microsoft.com/en-us/azure/developer/javascript/core/configure-local-development-environment?tabs=bash#create-environment-variables-for-the-azure-libraries).
 - Run `npm install` to install the required dependencies. 
 - Run `npm run upload-to-storage-containers.js` to run the sample.
+
+### Troubleshooting
+- If you see `This request is not authorized to perform this operation using this permission.` ensure your Azure AD application has the proper Role Assignments set in IAM.

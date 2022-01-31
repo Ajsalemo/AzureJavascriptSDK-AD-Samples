@@ -14,3 +14,6 @@ Packages used:
 - This sample requires this to be ran on some type of resource that supports System Assigned Identity. You can follow [this quick guide](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm#system-assigned-managed-identity) on how to enable it and assign the System Identity to the resource you're using for this sample.
 - Run `npm install` to install the required dependencies. 
 - Run `npm run javascript-sdk-msi-system-assigned.js` to run the sample.
+
+### Troubleshooting
+- Ensure your Azure AD application has proper Access policies set on the Key Vault you're targeting if you encounter `get`, `list`, `update`, etc. operations being blocked.
